@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.EventsPage;
 import pages.HomePage;
 
+import javax.swing.*;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
@@ -166,6 +168,61 @@ public class EpamProjectWorkApplicationTests {
 
 		System.out.println("Ура");
 	}
+
+	@Test
+	@Step("Сheck the Filtering of reports by category")
+	public void СheckTheFilteringOfReportsByCategory() throws InterruptedException {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+
+		logger.info("Тест стaрт");
+		homePage.openHomePage();
+		logger.info("Переходим на вкладку Talks Library (Video)");
+		driver.findElement(By.xpath("//a[@class='nav-link'][normalize-space()='Video']")).click();
+		logger.info("Нажимаем на More Filters");
+		driver.findElement(By.xpath("//span[normalize-space()='More Filters']")).click();
+		logger.info("Выбираем на вкладке фильтров: Category – Testing");
+		driver.findElement(By.xpath("//div[@id='filter_category']")).click();
+
+		//Крутим скролл вниз
+		JScrollPane jScrollPane1 = new findElement(By.xpath("//div[@class='evnt-filter-menu evnt-dropdown-menu dropdown-menu with-arrow show']//div[@class='evnt-filter-menu-scroll']"));
+		JScrollBar vsb = jScrollPane1.getVerticalScrollBar();
+		vsb.setValue( vsb.getMaximum() );
+		//Выбираем Testing
+		JavascriptExecutor ex=(JavascriptExecutor)driver;
+		ex.executeScript("arguments[0].click()", driver.findElement(By.xpath("//label[normalize-space()='Testing']")));
+
+//		Thread.sleep(1000);
+		logger.info("Выбираем на вкладке фильтров: Location – Belarus");
+		driver.findElement(By.xpath("//div[@id='filter_location']")).click();
+		driver.findElement(By.xpath("//label[normalize-space()='Belarus']")).click();
+		logger.info("Выбираем на вкладке фильтров: Language – English");
+		driver.findElement(By.xpath("//div[@id='filter_language']")).click();
+		driver.findElement(By.xpath("//label[normalize-space()='ENGLISH']")).click();
+		System.out.println("Ура");
+		logger.info("Проверим, что на странице отображаются карточки соответствующие правилам выбранных фильтров");
+		logger.info("Перейдем в одну из них");
+
+//		logger.info("Нажимаем на Hide Filters, чтобы фильтр уменьшился, зараза!");
+//		driver.findElement(By.xpath("//span[normalize-space()='Hide Filters']")).click();
+
+		logger.info("Жмем принять на сообщении про куки, чтобы они пропали, будь они не ладны!");
+		driver.findElement(By.xpath("//button[@id = 'onetrust-accept-btn-handler']")).click();
+
+		logger.info("А вот теперь, наконец-то, перейдем в одну из них");
+		driver.findElement(By.xpath("//div[@class = 'evnt-talks-column cell-6']")).click();
+
+		String adress = driver.findElement(By.xpath("//div[@class = 'evnt-talk-details location evnt-now-past-talk']//span")).getText();
+		System.out.println(adress);
+		assertTrue(adress.contains("Belarus"));
+
+	}
+
+	private class findElement extends JScrollPane {
+		public findElement(By xpath) {
+		}
+	}
+
 
 //	Фильтрация докладов по категориям:
 //	1 Пользователь переходит на вкладку Talks Library
