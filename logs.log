@@ -115,3 +115,162 @@
 2021-08-13 20:47:29,679 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
 2021-08-13 20:47:29,704 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
 2021-08-13 20:47:29,717 INFO c.e.E.EpamProjectWorkApplicationTests [main] и сравним их количество
+2021-08-14 09:36:13,389 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 09:36:13,399 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 09:36:21,807 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 09:36:21,938 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 09:36:21,938 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 09:36:23,821 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 09:36:23,821 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 09:36:24,783 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 09:36:24,783 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 09:36:24,806 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 09:38:01,077 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 09:38:01,084 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 09:38:09,314 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 09:38:09,433 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 09:38:09,433 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 09:38:11,084 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 09:38:11,084 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 09:38:11,880 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 09:38:11,880 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 09:38:11,904 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 09:38:43,693 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 09:38:43,700 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 09:38:52,004 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 09:38:52,186 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 09:38:52,186 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 09:38:54,181 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 09:38:54,181 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 09:38:55,162 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 09:38:55,162 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 09:38:55,184 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 09:45:55,006 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 09:45:55,014 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 09:46:03,161 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 09:46:03,280 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 09:46:03,281 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 09:46:05,230 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 09:46:05,230 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 09:46:06,009 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 09:46:06,009 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 09:46:06,034 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 10:04:35,405 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 10:04:35,412 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 10:04:43,742 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 10:04:43,923 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 10:04:43,924 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 10:04:45,520 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 10:04:45,520 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 10:04:46,315 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 10:04:46,315 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 10:04:46,343 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 10:04:46,361 INFO c.e.E.EpamProjectWorkApplicationTests [main] и сравним их количество
+2021-08-14 10:33:53,982 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 10:33:54,002 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 10:34:02,203 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 10:34:02,366 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 10:34:02,367 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 10:34:04,159 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 10:34:04,159 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 10:34:05,072 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 10:34:05,072 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 10:34:05,095 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 10:34:05,117 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-14 10:36:36,948 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 10:36:37,570 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 10:36:45,414 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 10:36:45,541 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 10:36:45,541 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 10:36:47,368 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 10:36:47,368 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 10:36:48,210 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 10:36:48,210 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 10:36:48,236 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 10:36:48,255 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-14 10:53:19,301 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 10:53:20,003 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 10:53:27,767 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 10:53:27,897 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 10:53:27,898 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 10:53:29,859 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 10:53:29,859 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 10:53:30,809 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 10:53:30,810 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 10:53:30,834 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 10:53:30,854 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-14 10:58:40,631 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 10:58:41,221 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 10:58:48,854 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 10:58:48,979 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 10:58:48,980 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 10:58:51,142 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 10:58:51,142 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 10:58:51,956 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 10:58:51,956 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 10:58:51,979 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 10:58:52,004 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-14 11:09:00,008 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:09:01,038 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:09:08,447 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:09:08,582 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 11:09:08,582 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 11:09:10,684 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 11:09:10,685 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 11:09:11,565 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 11:09:11,565 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 11:09:11,601 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 11:09:11,636 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-14 11:09:13,690 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:09:13,698 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:09:22,266 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:12:35,998 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:12:36,600 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:12:44,373 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:12:44,522 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 11:12:44,523 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 11:12:46,291 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 11:12:46,291 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 11:12:47,282 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 11:12:47,282 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 11:12:47,314 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 11:12:47,340 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-14 11:12:49,383 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:12:49,399 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:12:57,888 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:15:39,978 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:15:40,977 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:15:48,486 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:15:48,675 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 11:15:48,676 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 11:15:50,566 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 11:15:50,566 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 11:15:51,403 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 11:15:51,404 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 11:15:51,435 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 11:15:51,481 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-14 11:15:53,843 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:15:53,860 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:16:02,418 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:37:52,719 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:37:52,733 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:38:01,166 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:38:01,288 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 11:38:01,289 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 11:38:02,917 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 11:38:02,917 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 11:38:03,733 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 11:38:03,733 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 11:38:03,764 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 11:38:03,794 INFO c.e.E.EpamProjectWorkApplicationTests [main] и сравним их количество
+2021-08-14 11:41:34,796 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 11:41:35,379 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 11:41:42,982 INFO c.e.E.EpamProjectWorkApplicationTests [main] Сайт открыт
+2021-08-14 11:41:43,116 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыто окно браузера на полный экран
+2021-08-14 11:41:43,116 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку events
+2021-08-14 11:41:44,868 INFO c.e.E.EpamProjectWorkApplicationTests [main] Открыта вкладка events
+2021-08-14 11:41:44,869 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 11:41:45,645 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 11:41:45,645 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-14 11:41:45,677 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на странице
+2021-08-14 11:41:45,708 INFO c.e.E.EpamProjectWorkApplicationTests [main] и сравним их количество
