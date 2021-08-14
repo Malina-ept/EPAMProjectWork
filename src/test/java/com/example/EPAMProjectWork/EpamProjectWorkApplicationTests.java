@@ -125,18 +125,57 @@ public class EpamProjectWorkApplicationTests {
 		logger.info("Проверим, что на странице есть карточки");
 		driver.findElements(By.xpath("//div[@class = 'evnt-events-column cell-3']"));
 		logger.info("На странице есть карточки событий");
-
+//Сюда нужна проверка, что Даты проведения мероприятий больше или равны текущей дате (или текущая дата находится в диапазоне дат проведения)
 		logger.info("Проверим, что даты проведения мероприятий больше или равны текущей дате");
-
-
-
-
-//	Валидация дат предстоящих мероприятий:
-//1 Пользователь переходит на вкладку events
-//2 Пользователь нажимает на Upcoming Events
-//3 На странице отображаются карточки предстоящих мероприятий.
-//4 Даты проведения мероприятий больше или равны текущей дате (или текущая дата находится в диапазоне дат проведения)
-
-
 	}
+
+	@Test
+	@Step("Viewing past events in Canada")
+	public void СheckPastEventsInCanada() throws InterruptedException {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+
+		logger.info("Тест стaрт");
+		homePage.openHomePage();
+		homePage.clickOnTheTabEvents();
+
+		logger.info("Нажимаем на кнопку Past Events");
+		eventsPage.pastEventsButton.click();
+		logger.info("Нажимаем на Location в блоке фильтров");
+		driver.findElement(By.xpath("//span[normalize-space()='Location']")).click();
+		logger.info("И выбираем Canada в выпадающем списке");
+		driver.findElement(By.xpath("//label[normalize-space()='Canada']")).click();
+		Thread.sleep(1000);
+
+		logger.info("Проверим, что количество карточек равно счетчику на кнопке Past Events");
+		logger.info("Возьмем количество карточек на кнопке Past Events");
+		String countOfCardsOnButton = eventsPage.countOnTheButtonUpcomingEvents.getText();
+
+		logger.info("Посчитаем количество карточек на странице");
+		int count = driver.findElements(By.xpath("//div[@class = 'evnt-events-column cell-3']")).size();
+
+		String countOfCardsOnPageText = String.valueOf(count);
+
+		System.out.println(countOfCardsOnPageText);
+		System.out.println(countOfCardsOnButton);
+
+		logger.info("И сравним их количество");
+		assertEquals("Кол-во на кнопке не совпадает с кол-вом карточек на странице", countOfCardsOnButton, countOfCardsOnPageText);
+
+// Здесь проверяем, что на странице отображаются карточки прошедших мероприятий. Даты проведенных мероприятий меньше текущей даты.
+
+		System.out.println("Ура");
+	}
+
+//	Фильтрация докладов по категориям:
+//	1 Пользователь переходит на вкладку Talks Library
+//  2 Пользователь нажимает на More Filters
+//  3 Пользователь выбирает: Category – Testing, Location – Belarus, Language – English, На вкладке фильтров
+//  4 На странице отображаются карточки соответствующие правилам выбранных фильтров
+
+//	Поиск докладов по ключевому слову:
+//	1 Пользователь переходит на вкладку VIDEO - Talks Library
+//  2 Пользователь вводит ключевое слово QA в поле поиска
+//  3 На странице отображаются доклады, содержащие в названии ключевое слово поиска
+
 }
