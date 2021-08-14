@@ -459,3 +459,49 @@
 2021-08-14 14:47:51,740 INFO p.HomePage [main] Открыто окно браузера на полный экран
 2021-08-14 14:47:53,496 INFO p.HomePage [main] Открыта вкладка events
 2021-08-14 14:47:53,497 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 15:13:34,148 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 15:13:34,750 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 15:13:42,525 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 15:13:42,691 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 15:13:44,395 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 15:13:44,396 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 15:13:45,269 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что нажата кнопка: Upcoming events
+2021-08-14 15:13:45,269 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 15:13:45,269 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице есть карточки
+2021-08-14 15:14:35,797 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 15:14:36,429 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 15:14:43,943 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 15:14:44,125 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 15:14:46,060 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 15:14:46,060 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 15:14:46,893 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что нажата кнопка: Upcoming events
+2021-08-14 15:14:46,893 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 15:14:46,893 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице есть карточки
+2021-08-14 15:17:50,102 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 15:17:50,712 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 15:17:58,533 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 15:17:58,664 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 15:18:00,532 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 15:18:00,533 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 15:18:01,268 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что нажата кнопка: Upcoming events
+2021-08-14 15:18:01,268 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 15:18:01,269 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице есть карточки
+2021-08-14 15:23:07,304 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 15:23:07,969 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 15:23:15,559 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 15:23:15,681 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 15:23:17,581 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 15:23:17,581 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 15:23:18,385 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что нажата кнопка: Upcoming events
+2021-08-14 15:23:18,386 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 15:23:18,386 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице есть карточки
+2021-08-14 15:29:54,024 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 15:29:54,641 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 15:30:02,360 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 15:30:02,550 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 15:30:06,407 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 15:30:06,407 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-14 15:30:07,304 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что нажата кнопка: Upcoming events
+2021-08-14 15:30:07,304 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-14 15:30:07,304 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице есть карточки
+2021-08-14 15:30:07,337 INFO c.e.E.EpamProjectWorkApplicationTests [main] На странице есть карточки событий

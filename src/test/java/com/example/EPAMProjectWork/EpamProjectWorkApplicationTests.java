@@ -22,6 +22,7 @@ import pages.HomePage;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 public class EpamProjectWorkApplicationTests {
 
@@ -96,12 +97,46 @@ public class EpamProjectWorkApplicationTests {
 		System.out.println(driver.findElement(By.xpath("(//div[@class = 'speakers-wrapper'])[1]//img")).getTagName());
 
 		logger.info("Проверяем что информация о мероприятии не пуста");
-		assertNotNull("Язык мероприятия пуст",driver.findElement(By.xpath("(//p[@class = 'language'])[1]//span")).getText());
-		assertNotNull("В названии мероприятия пусто",driver.findElement(By.xpath("(//div[@class = 'evnt-event-name'])[1]//span")).getText());
-		assertNotNull("Дата мероприятия пуста",driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[1]")).getText());
-		assertNotNull("Нет информации о регистрации",driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[2]")).getText());
-		assertNotNull("Нет списка спикеров",driver.findElement(By.xpath("(//div[@class = 'speakers-wrapper'])[1]//img")).getTagName());
+		assertNotNull("Язык мероприятия пуст", driver.findElement(By.xpath("(//p[@class = 'language'])[1]//span")).getText());
+		assertNotNull("В названии мероприятия пусто", driver.findElement(By.xpath("(//div[@class = 'evnt-event-name'])[1]//span")).getText());
+		assertNotNull("Дата мероприятия пуста", driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[1]")).getText());
+		assertNotNull("Нет информации о регистрации", driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[2]")).getText());
+		assertNotNull("Нет списка спикеров", driver.findElement(By.xpath("(//div[@class = 'speakers-wrapper'])[1]//img")).getTagName());
 		logger.info("Поля: Язык, Название, Дата мероприятия, Информация о регистрации, Спикеры не пусты");
+	}
+
+
+	@Test
+	@Step("Сheck the dates of upcoming events")
+	public void СheckTheDatesOfUpcomingEvents() throws InterruptedException {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+
+		logger.info("Тест стaрт");
+		homePage.openHomePage();
+		homePage.clickOnTheTabEvents();
+
+		logger.info("Найдем нажатую кнопку Upcoming events");
+		WebElement actionButton = (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(eventsPage.upcomingEventsActiveButton));
+		String actualButtonText = actionButton.getText();
+		logger.info("Проверим, что нажата кнопка: Upcoming events");
+		assertTrue("Нажатая кнопка не соответствует Upcoming events ", actualButtonText.contains("UPCOMING EVENTS"));
+		logger.info("Активная кнопка: Upcoming events");
+		logger.info("Проверим, что на странице есть карточки");
+		driver.findElements(By.xpath("//div[@class = 'evnt-events-column cell-3']"));
+		logger.info("На странице есть карточки событий");
+
+		logger.info("Проверим, что даты проведения мероприятий больше или равны текущей дате");
+
+
+
+
+//	Валидация дат предстоящих мероприятий:
+//1 Пользователь переходит на вкладку events
+//2 Пользователь нажимает на Upcoming Events
+//3 На странице отображаются карточки предстоящих мероприятий.
+//4 Даты проведения мероприятий больше или равны текущей дате (или текущая дата находится в диапазоне дат проведения)
+
 
 	}
 }
