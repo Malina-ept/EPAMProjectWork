@@ -12,8 +12,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.EventsPage;
+import pages.HomePage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -42,36 +45,33 @@ public class EpamProjectWorkApplicationTests {
 
 	@Test
 	@Step("View Upcoming Events")
-	public void viewUpcomingEvents() {
-		logger.info("Тест стaрт");
-		driver.get("https://events.epam.com/");
-		logger.info("Сайт открыт");
-		driver.manage().window().maximize();
-		logger.info("Открыто окно браузера на полный экран");
+	public void viewUpcomingEvents() throws InterruptedException {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
 
-		logger.info("Переходим на вкладку events");
-		driver.findElement(By.xpath("//li[@class =  'nav-item events-icon']")).click();
-		logger.info("Открыта вкладка events");
+		logger.info("Тест стaрт");
+		homePage.openHomePage();
+		homePage.clickOnTheTabEvents();
 
 		logger.info("Найдем нажатую кнопку Upcoming events");
-		WebElement actionButton = (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class = 'evnt-tab-link nav-link active']//span[text()='Upcoming events']")));
-		String actualButtonText = driver.findElement(By.xpath("//a[@class = 'evnt-tab-link nav-link active']//span[text()='Upcoming events']")).getText();
+		WebElement actionButton = (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(eventsPage.upcomingEventsActiveButton));
+		String actualButtonText = actionButton.getText();
+		logger.info("Проверим, что нажата кнопка: Upcoming events");
 		assertTrue("Нажатая кнопка не соответствует Upcoming events ", actualButtonText.contains("UPCOMING EVENTS"));
 		logger.info("Активная кнопка: Upcoming events");
 
 		logger.info("Возьмем количество карточек на кнопке Upcoming events");
-		String countOfCardsOnButton = driver.findElement(By.xpath("//a[@class = 'evnt-tab-link nav-link active']//span[3]")).getText();
-		logger.info("Возьмем количество карточек на странице");
+		String countOfCardsOnButton = eventsPage.countOnTheButtonUpcomingEvents.getText();
+		logger.info("Посчитаем количество карточек на странице");
 		int count = driver.findElements(By.xpath("//div[@class = 'evnt-events-column cell-3']")).size();
 
-		String countOfCardsOnPage1 = String.valueOf(count);
+		String countOfCardsOnPageText = String.valueOf(count);
 
-		System.out.println(countOfCardsOnPage1);
+		System.out.println(countOfCardsOnPageText);
 		System.out.println(countOfCardsOnButton);
 
-		logger.info("и сравним их количество");
-		assertEquals("Кол-во на кнопке не совпадает с кол-вом карточек на странице", countOfCardsOnButton, countOfCardsOnPage1);
-
+		logger.info("И сравним их количество");
+		assertEquals("Кол-во на кнопке не совпадает с кол-вом карточек на странице", countOfCardsOnButton, countOfCardsOnPageText);
 
 	}
 }
