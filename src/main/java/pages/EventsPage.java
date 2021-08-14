@@ -20,7 +20,11 @@ public class EventsPage {
     @FindBy(xpath = "//a[@class = 'evnt-tab-link nav-link active']//span[3]")
     public WebElement countOnTheButtonUpcomingEvents;
 
-    @FindBy(xpath = "//div[@class = 'evnt-events-column cell-3']")
-    public int countOfCardsOnPage;
+//    @FindBy(xpath = "//div[@class = 'evnt-events-column cell-3']")
+//    public int countOfCardsOnPage;
+
+    @FindBy(xpath = "//a[@class = 'evnt-tab-link nav-link']")
+    public WebElement pastEventsButton;
+
 
     }

@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -20,8 +21,7 @@ import pages.HomePage;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class EpamProjectWorkApplicationTests {
 
@@ -72,6 +72,36 @@ public class EpamProjectWorkApplicationTests {
 
 		logger.info("И сравним их количество");
 		assertEquals("Кол-во на кнопке не совпадает с кол-вом карточек на странице", countOfCardsOnButton, countOfCardsOnPageText);
+
+	}
+
+	@Test
+	@Step("Viewing past event cards")
+	public void checkPastEventCards() throws InterruptedException {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+
+		logger.info("Тест стaрт");
+		homePage.openHomePage();
+		homePage.clickOnTheTabEvents();
+
+		logger.info("Нажимаем на кнопку Past Events");
+		eventsPage.pastEventsButton.click();
+
+		logger.info("Посмотрим инфу в одной карточке");
+		System.out.println(driver.findElement(By.xpath("(//p[@class = 'language'])[1]//span")).getText());
+		System.out.println(driver.findElement(By.xpath("(//div[@class = 'evnt-event-name'])[1]//span")).getText());
+		System.out.println(driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[1]")).getText());
+		System.out.println(driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[2]")).getText());
+		System.out.println(driver.findElement(By.xpath("(//div[@class = 'speakers-wrapper'])[1]//img")).getTagName());
+
+		logger.info("Проверяем что информация о мероприятии не пуста");
+		assertNotNull("Язык мероприятия пуст",driver.findElement(By.xpath("(//p[@class = 'language'])[1]//span")).getText());
+		assertNotNull("В названии мероприятия пусто",driver.findElement(By.xpath("(//div[@class = 'evnt-event-name'])[1]//span")).getText());
+		assertNotNull("Дата мероприятия пуста",driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[1]")).getText());
+		assertNotNull("Нет информации о регистрации",driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[2]")).getText());
+		assertNotNull("Нет списка спикеров",driver.findElement(By.xpath("(//div[@class = 'speakers-wrapper'])[1]//img")).getTagName());
+		logger.info("Поля: Язык, Название, Дата мероприятия, Информация о регистрации, Спикеры не пусты");
 
 	}
 }

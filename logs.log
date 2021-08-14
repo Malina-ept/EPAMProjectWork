@@ -387,3 +387,75 @@
 2021-08-14 13:10:50,685 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
 2021-08-14 13:10:50,718 INFO c.e.E.EpamProjectWorkApplicationTests [main] Посчитаем количество карточек на странице
 2021-08-14 13:10:50,746 INFO c.e.E.EpamProjectWorkApplicationTests [main] и сравним их количество
+2021-08-14 14:03:41,205 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:03:41,828 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:03:49,545 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:03:49,676 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:03:51,566 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:03:51,566 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:15:45,074 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:15:45,688 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:15:53,261 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:15:53,387 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:15:55,288 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:15:55,288 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:24:43,675 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:24:44,335 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:24:51,928 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:24:52,060 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:24:53,710 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:24:53,710 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:26:11,922 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:26:12,538 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:26:20,207 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:26:20,358 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:26:21,927 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:26:21,927 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:30:20,562 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:30:21,193 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:30:28,787 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:30:28,918 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:30:30,590 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:30:30,591 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:32:31,895 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:32:32,595 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:32:40,092 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:32:40,215 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:32:42,033 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:32:42,033 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:33:14,294 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:33:14,941 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:33:22,392 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:33:22,513 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:33:24,180 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:33:24,180 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:33:57,635 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:33:58,290 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:34:05,739 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:34:05,908 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:34:07,554 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:34:07,554 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:40:35,331 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:40:35,928 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:40:43,492 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:40:43,672 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:40:45,325 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:40:45,325 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:43:37,915 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:43:38,556 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:43:46,154 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:43:46,330 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:43:48,077 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:43:48,077 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:46:41,938 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:46:42,559 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:46:50,108 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:46:50,279 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:46:51,889 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:46:51,890 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-14 14:47:43,123 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-14 14:47:43,752 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-14 14:47:51,561 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-14 14:47:51,740 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-14 14:47:53,496 INFO p.HomePage [main] Открыта вкладка events
+2021-08-14 14:47:53,497 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
