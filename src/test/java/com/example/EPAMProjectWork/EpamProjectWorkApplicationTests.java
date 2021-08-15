@@ -1,9 +1,9 @@
 package com.example.EPAMProjectWork;
 
 
-import com.example.EPAMProjectWork.WDFactory.Browsers;
-import com.example.EPAMProjectWork.WDFactory.WDFactory;
-import io.qameta.allure.Step;
+import com.example.EPAMProjectWork.helpers.Browsers;
+import com.example.EPAMProjectWork.helpers.WDFactory;
+import io.qameta.allure.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
@@ -49,6 +49,10 @@ public class EpamProjectWorkApplicationTests {
 
     @Test
     @Step("View Upcoming Events")
+    @Epic("EPAM")
+    @Feature("Upcoming Events")
+    @Story("View upcoming events from events.epam.com")
+    @Description("Comparison of the number of cards on the button and on the page")
     public void viewUpcomingEvents() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
@@ -76,11 +80,14 @@ public class EpamProjectWorkApplicationTests {
 
         logger.info("И сравним их количество");
         assertEquals("Кол-во на кнопке не совпадает с кол-вом карточек на странице", countOfCardsOnButton, countOfCardsOnPageText);
-
     }
 
     @Test
     @Step("Viewing past event cards")
+    @Epic("EPAM")
+    @Feature("Past Events")
+    @Story("Check past event cards from events.epam.com")
+    @Description("Check that the event card is not empty")
     public void checkPastEventCards() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
@@ -111,6 +118,10 @@ public class EpamProjectWorkApplicationTests {
 
     @Test
     @Step("Сheck the dates of upcoming events")
+    @Epic("EPAM")
+    @Feature("Upcoming Events")
+    @Story("Check the dates of upcoming events from events.epam.com")
+    @Description("Check that the dates of the events are greater than or equal to the current date")
     public void checkTheDatesOfUpcomingEvents() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
@@ -136,6 +147,10 @@ public class EpamProjectWorkApplicationTests {
 
     @Test
     @Step("Viewing past events in Canada")
+    @Epic("EPAM")
+    @Feature("Past Events")
+    @Story("Check past events in Canada from events.epam.com")
+    @Description("Checking out past events in Canada")
     public void checkPastEventsInCanada() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
@@ -175,6 +190,10 @@ public class EpamProjectWorkApplicationTests {
 
     @Test
     @Step("Сheck the Filtering of reports by category")
+    @Epic("EPAM")
+    @Feature("Talks Library (Video)")
+    @Story("Check the filtering of reports by category from events.epam.com")
+    @Description("Check the filtering and its results")
     public void checkTheFilteringOfReportsByCategory() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
@@ -200,15 +219,12 @@ public class EpamProjectWorkApplicationTests {
         JavascriptExecutor ex = (JavascriptExecutor) driver;
         ex.executeScript("arguments[0].click()", filters.testingInCategoryInFilter);
 
-//		Thread.sleep(1000);
         logger.info("Выбираем на вкладке фильтров: Location – Belarus");
         filters.locationInFilter.click();
         filters.belarusInFilterOfLocation.click();
-//		Thread.sleep(1000);
         logger.info("Выбираем на вкладке фильтров: Language – English");
         filters.languageInFilter.click();
         filters.englishInLanguageInFilter.click();
-//		Thread.sleep(1000);
         System.out.println("Ура");
         logger.info("Проверим, что на странице отображаются карточки соответствующие правилам выбранных фильтров");
         logger.info("Перейдем в одну из них");
@@ -216,7 +232,6 @@ public class EpamProjectWorkApplicationTests {
         logger.info("Жмем принять на сообщении про куки, чтобы они пропали, будь они не ладны!");
         messageAboutCookies.acceptButton.click();
 
-//		Thread.sleep(1000);
         logger.info("А вот теперь, наконец-то, перейдем в одну из них");
         videoPage.cardOnTheVideoPage.click();
 
@@ -235,9 +250,12 @@ public class EpamProjectWorkApplicationTests {
 
     @Test
     @Step("Search for reports by keyword")
+    @Epic("EPAM")
+    @Feature("Talks Library (Video)")
+    @Story("Search for reports by keyword from events.epam.com")
+    @Description("Check the filtering by keywords")
     public void SearchForReportsByKeyword() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
         MessageAboutCookies messageAboutCookies = PageFactory.initElements(driver, MessageAboutCookies.class);
         Filters filters = PageFactory.initElements(driver, Filters.class);
         VideoPage videoPage = PageFactory.initElements(driver, VideoPage.class);
@@ -265,16 +283,8 @@ public class EpamProjectWorkApplicationTests {
 
     }
 
-
     private class findElement extends JScrollPane {
         public findElement(By xpath) {
         }
     }
-
-
-//	Поиск докладов по ключевому слову:
-//	1 Пользователь переходит на вкладку VIDEO - Talks Library
-//  2 Пользователь вводит ключевое слово QA в поле поиска
-//  3 На странице отображаются доклады, содержащие в названии ключевое слово поиска
-
 }

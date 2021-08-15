@@ -1,4 +1,4 @@
-package com.example.EPAMProjectWork.WDFactory;
+package com.example.EPAMProjectWork.helpers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

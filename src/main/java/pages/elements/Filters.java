@@ -25,7 +25,7 @@ public class Filters {
     @FindBy(xpath = "//div[@id='filter_category']")
     public WebElement categoryInFilter;
 
-
+//Я попыталась вынести локатор скроллбара из теста, но у меня неполучилось
 //    @FindBy(xpath = "//div[@class='evnt-filter-menu evnt-dropdown-menu dropdown-menu with-arrow show']//div[@class='evnt-filter-menu-scroll']")
 //    public WebElement scrollBarInCategoryInFilter;
 

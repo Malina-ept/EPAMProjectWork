@@ -7,6 +7,4 @@ public class VideoPage {
 
     @FindBy(xpath = "//div[@class = 'evnt-talks-column cell-6']")
     public WebElement cardOnTheVideoPage;
-
-
 }

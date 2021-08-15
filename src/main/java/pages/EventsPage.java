@@ -43,6 +43,4 @@ public class EventsPage {
 
     @FindBy(xpath = "(//div[@class = 'speakers-wrapper'])[1]//img")
     public WebElement speakersOnCard;
-
-
 }

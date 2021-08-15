@@ -16,5 +16,4 @@ public class VideoPageCard {
 
     @FindBy(xpath = "//label[normalize-space()='QA']")
     public WebElement categoryOnCardQA;
-
 }

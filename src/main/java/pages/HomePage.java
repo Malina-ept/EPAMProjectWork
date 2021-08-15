@@ -24,15 +24,11 @@ public class HomePage {
     public void clickOnTheTabEvents() {
         driver.findElement(By.xpath("//li[@class =  'nav-item events-icon']")).click();
         logger.info("Открыта вкладка events");
-
-
     }
 
     public void clickOnTheTabVideo() {
         driver.findElement(By.xpath("//a[@class='nav-link'][normalize-space()='Video']")).click();
         logger.info("Открыта вкладка Video");
-
-
     }
 
 

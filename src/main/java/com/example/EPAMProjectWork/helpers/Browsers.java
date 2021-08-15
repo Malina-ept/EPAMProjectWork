@@ -1,4 +1,4 @@
-package com.example.EPAMProjectWork.WDFactory;
+package com.example.EPAMProjectWork.helpers;
 
 public enum Browsers {
 
