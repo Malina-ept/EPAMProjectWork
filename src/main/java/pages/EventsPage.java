@@ -10,6 +10,7 @@ public class EventsPage {
 
     private final WebDriver driver;
     private Logger logger = LogManager.getLogger(EventsPage.class);
+
     public EventsPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -20,17 +21,14 @@ public class EventsPage {
     @FindBy(xpath = "//a[@class = 'evnt-tab-link nav-link active']//span[3]")
     public WebElement countOnTheButtonUpcomingEvents;
 
-//    @FindBy(xpath = "//div[@class = 'evnt-events-column cell-3']")
-//    public int countOfCardsOnPage;
-
     @FindBy(xpath = "//a[@class = 'evnt-tab-link nav-link']")
     public WebElement pastEventsButton;
 
-// Любая карточка на странице
+    // Любая карточка на странице
     @FindBy(xpath = "//div[@class = 'evnt-events-column cell-3']")
     public WebElement anyСardOnThePage;
 
-//Информация на карточке:
+    //Информация на карточке:
     @FindBy(xpath = "(//p[@class = 'language'])[1]//span")
     public WebElement languageOnCard;
 
@@ -46,16 +44,5 @@ public class EventsPage {
     @FindBy(xpath = "(//div[@class = 'speakers-wrapper'])[1]//img")
     public WebElement speakersOnCard;
 
-    //Фильтр и значения внутри:
 
-
-//    @FindBy(xpath = "")
-//    public WebElement speakersOnCard;
-//
-//    @FindBy(xpath = "")
-//    public WebElement speakersOnCard;
-
-
-
-
-    }
+}

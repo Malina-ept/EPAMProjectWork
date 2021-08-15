@@ -15,21 +15,20 @@ public class HomePage {
     }
 
     public void openHomePage() throws InterruptedException {
-//        Thread.sleep(1000);
         driver.get("https://events.epam.com/");
         logger.info("Открыта домашняя страница https://events.epam.com/");
         driver.manage().window().maximize();
         logger.info("Открыто окно браузера на полный экран");
-            }
+    }
 
-    public void clickOnTheTabEvents(){
+    public void clickOnTheTabEvents() {
         driver.findElement(By.xpath("//li[@class =  'nav-item events-icon']")).click();
         logger.info("Открыта вкладка events");
 
 
     }
 
-    public void clickOnTheTabVideo(){
+    public void clickOnTheTabVideo() {
         driver.findElement(By.xpath("//a[@class='nav-link'][normalize-space()='Video']")).click();
         logger.info("Открыта вкладка Video");
 

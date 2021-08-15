@@ -9,6 +9,4 @@ public class VideoPage {
     public WebElement cardOnTheVideoPage;
 
 
-
-
 }
