@@ -1,8 +1,5 @@
 package com.example.EPAMProjectWork;
 
-
-import com.example.EPAMProjectWork.helpers.Browsers;
-import com.example.EPAMProjectWork.helpers.WDFactory;
 import io.qameta.allure.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,9 +23,11 @@ import pages.elements.MessageAboutCookies;
 import javax.swing.*;
 import java.util.concurrent.TimeUnit;
 
+import static com.example.EPAMProjectWork.helpers.WebDriverInit.initDriver;
 import static org.junit.Assert.*;
 
 public class EpamProjectWorkApplicationTests {
+
 
     private Logger logger = LogManager.getLogger(EpamProjectWorkApplicationTests.class);
     protected static WebDriver driver;
@@ -36,7 +35,11 @@ public class EpamProjectWorkApplicationTests {
 
     @Before
     public void startUp() {
-        driver = WDFactory.createDriver(Browsers.CHROME);
+        driver = initDriver();
+
+// Для использования WDFactory:
+//        driver = WDFactory.createDriver(Browsers.CHROME);
+
         logger.info("Драйвер поднят");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
@@ -196,7 +199,6 @@ public class EpamProjectWorkApplicationTests {
     @Description("Check the filtering and its results")
     public void checkTheFilteringOfReportsByCategory() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
         VideoPage videoPage = PageFactory.initElements(driver, VideoPage.class);
         Filters filters = PageFactory.initElements(driver, Filters.class);
         MessageAboutCookies messageAboutCookies = PageFactory.initElements(driver, MessageAboutCookies.class);

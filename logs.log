@@ -1618,3 +1618,70 @@
 2021-08-15 16:46:06,827 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице есть карточки
 2021-08-15 16:46:06,857 INFO c.e.E.EpamProjectWorkApplicationTests [main] На странице есть карточки событий
 2021-08-15 16:46:06,857 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что даты проведения мероприятий больше или равны текущей дате
+2021-08-15 22:30:28,737 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-15 22:30:29,741 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-15 22:30:33,905 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-15 22:30:34,023 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-15 22:30:36,042 INFO p.HomePage [main] Открыта вкладка events
+2021-08-15 22:30:36,043 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-15 22:30:37,125 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что нажата кнопка: Upcoming events
+2021-08-15 22:30:37,125 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-15 22:30:37,126 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Upcoming events
+2021-08-15 22:30:37,186 INFO c.e.E.EpamProjectWorkApplicationTests [main] Посчитаем количество карточек на странице
+2021-08-15 22:30:37,233 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-15 22:30:40,920 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-15 22:30:40,930 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-15 22:30:42,935 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-15 22:30:43,047 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-15 22:30:44,930 INFO p.HomePage [main] Открыта вкладка events
+2021-08-15 22:30:44,930 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-15 22:30:45,672 INFO c.e.E.EpamProjectWorkApplicationTests [main] Посмотрим инфу в одной карточке
+2021-08-15 22:30:46,390 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверяем что информация о мероприятии не пуста
+2021-08-15 22:30:46,585 INFO c.e.E.EpamProjectWorkApplicationTests [main] Поля: Язык, Название, Дата мероприятия, Информация о регистрации, Спикеры не пусты
+2021-08-15 22:30:50,019 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-15 22:30:50,040 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-15 22:30:51,955 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-15 22:30:52,109 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-15 22:30:52,110 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку Talks Library (Video)
+2021-08-15 22:30:53,671 INFO p.HomePage [main] Открыта вкладка Video
+2021-08-15 22:30:53,672 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на More Filters
+2021-08-15 22:30:54,607 INFO c.e.E.EpamProjectWorkApplicationTests [main] Выбираем на вкладке фильтров: Category – Testing
+2021-08-15 22:30:55,195 INFO c.e.E.EpamProjectWorkApplicationTests [main] Выбираем на вкладке фильтров: Location – Belarus
+2021-08-15 22:30:55,849 INFO c.e.E.EpamProjectWorkApplicationTests [main] Выбираем на вкладке фильтров: Language – English
+2021-08-15 22:30:56,424 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице отображаются карточки соответствующие правилам выбранных фильтров
+2021-08-15 22:30:56,425 INFO c.e.E.EpamProjectWorkApplicationTests [main] Перейдем в одну из них
+2021-08-15 22:30:56,426 INFO c.e.E.EpamProjectWorkApplicationTests [main] Жмем принять на сообщении про куки, чтобы они пропали, будь они не ладны!
+2021-08-15 22:30:56,537 INFO c.e.E.EpamProjectWorkApplicationTests [main] А вот теперь, наконец-то, перейдем в одну из них
+2021-08-15 22:31:02,123 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-15 22:31:02,135 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-15 22:31:04,093 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-15 22:31:04,245 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-15 22:31:04,246 INFO c.e.E.EpamProjectWorkApplicationTests [main] Переходим на вкладку Talks Library (Video)
+2021-08-15 22:31:05,825 INFO p.HomePage [main] Открыта вкладка Video
+2021-08-15 22:31:05,825 INFO c.e.E.EpamProjectWorkApplicationTests [main] Кликаем на поиск по ключевому слову в фильтре и вводим ключевое слово QA в поле поиска
+2021-08-15 22:31:06,267 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверяем, что на странице отображаются доклады, содержащие в названии ключевое слово поиска
+2021-08-15 22:31:06,267 INFO c.e.E.EpamProjectWorkApplicationTests [main] Жмем принять на сообщении про куки, чтобы они пропали, будь они не ладны!
+2021-08-15 22:31:06,369 INFO c.e.E.EpamProjectWorkApplicationTests [main] Перейдем в одну из них
+2021-08-15 22:31:12,156 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-15 22:31:12,167 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-15 22:31:14,083 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-15 22:31:14,229 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-15 22:31:16,011 INFO p.HomePage [main] Открыта вкладка events
+2021-08-15 22:31:16,011 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на кнопку Past Events
+2021-08-15 22:31:16,864 INFO c.e.E.EpamProjectWorkApplicationTests [main] Нажимаем на Location в блоке фильтров
+2021-08-15 22:31:17,473 INFO c.e.E.EpamProjectWorkApplicationTests [main] И выбираем Canada в выпадающем списке
+2021-08-15 22:31:18,653 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что количество карточек равно счетчику на кнопке Past Events
+2021-08-15 22:31:18,653 INFO c.e.E.EpamProjectWorkApplicationTests [main] Возьмем количество карточек на кнопке Past Events
+2021-08-15 22:31:18,691 INFO c.e.E.EpamProjectWorkApplicationTests [main] Посчитаем количество карточек на странице
+2021-08-15 22:31:18,709 INFO c.e.E.EpamProjectWorkApplicationTests [main] И сравним их количество
+2021-08-15 22:31:21,939 INFO c.e.E.EpamProjectWorkApplicationTests [main] Драйвер поднят
+2021-08-15 22:31:21,957 INFO c.e.E.EpamProjectWorkApplicationTests [main] Тест стaрт
+2021-08-15 22:31:24,128 INFO p.HomePage [main] Открыта домашняя страница https://events.epam.com/
+2021-08-15 22:31:24,256 INFO p.HomePage [main] Открыто окно браузера на полный экран
+2021-08-15 22:31:25,996 INFO p.HomePage [main] Открыта вкладка events
+2021-08-15 22:31:25,996 INFO c.e.E.EpamProjectWorkApplicationTests [main] Найдем нажатую кнопку Upcoming events
+2021-08-15 22:31:26,751 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что нажата кнопка: Upcoming events
+2021-08-15 22:31:26,751 INFO c.e.E.EpamProjectWorkApplicationTests [main] Активная кнопка: Upcoming events
+2021-08-15 22:31:26,751 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что на странице есть карточки
+2021-08-15 22:31:26,782 INFO c.e.E.EpamProjectWorkApplicationTests [main] На странице есть карточки событий
+2021-08-15 22:31:26,782 INFO c.e.E.EpamProjectWorkApplicationTests [main] Проверим, что даты проведения мероприятий больше или равны текущей дате
