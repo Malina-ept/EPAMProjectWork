@@ -212,9 +212,19 @@ public class EpamProjectWorkApplicationTests {
 		logger.info("А вот теперь, наконец-то, перейдем в одну из них");
 		driver.findElement(By.xpath("//div[@class = 'evnt-talks-column cell-6']")).click();
 
-		String adress = driver.findElement(By.xpath("//div[@class = 'evnt-talk-details location evnt-now-past-talk']//span")).getText();
-		System.out.println(adress);
-		assertTrue(adress.contains("Belarus"));
+		String address = driver.findElement(By.xpath("//div[@class = 'evnt-talk-details location evnt-now-past-talk']//span")).getText();
+		System.out.println(address);
+		String language = driver.findElement(By.xpath("//div[@class='evnt-talk-details language evnt-now-past-talk']//span")).getText();
+		System.out.println(language);
+		String category = driver.findElement(By.xpath("//label[normalize-space()='Testing']")).getText();
+		System.out.println(category);
+
+		assertTrue(address.contains("Belarus"));
+		assertTrue(language.contains("ENGLISH"));
+		assertTrue(category.contains("Testing"));
+		System.out.println("Ура, на странице отображаются карточки соответствующие правилам выбранных фильтров");
+
+
 
 	}
 
@@ -223,12 +233,6 @@ public class EpamProjectWorkApplicationTests {
 		}
 	}
 
-
-//	Фильтрация докладов по категориям:
-//	1 Пользователь переходит на вкладку Talks Library
-//  2 Пользователь нажимает на More Filters
-//  3 Пользователь выбирает: Category – Testing, Location – Belarus, Language – English, На вкладке фильтров
-//  4 На странице отображаются карточки соответствующие правилам выбранных фильтров
 
 //	Поиск докладов по ключевому слову:
 //	1 Пользователь переходит на вкладку VIDEO - Talks Library
