@@ -1,6 +1,8 @@
 package com.example.EPAMProjectWork;
 
 
+import com.example.EPAMProjectWork.WDFactory.Browsers;
+import com.example.EPAMProjectWork.WDFactory.WDFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
@@ -14,6 +16,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,8 +41,7 @@ public class EpamProjectWorkApplicationTests {
 
 	@Before
 	public void startUp() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = WDFactory.createDriver(Browsers.CHROME);
 		logger.info("Драйвер поднят");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
@@ -131,6 +133,8 @@ public class EpamProjectWorkApplicationTests {
 		logger.info("Проверим, что на странице есть карточки");
 		eventsPage.anyСardOnThePage.getLocation();
 		logger.info("На странице есть карточки событий");
+
+
 //Сюда нужна проверка, что Даты проведения мероприятий больше или равны текущей дате (или текущая дата находится в диапазоне дат проведения)
 		logger.info("Проверим, что даты проведения мероприятий больше или равны текущей дате");
 	}
