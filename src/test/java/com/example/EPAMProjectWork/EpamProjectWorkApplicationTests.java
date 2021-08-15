@@ -19,6 +19,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.EventsPage;
 import pages.HomePage;
+import pages.VideoPage;
+import pages.VideoPageCard;
+import pages.elements.Filters;
+import pages.elements.MessageAboutCookies;
 
 import javax.swing.*;
 import java.util.concurrent.TimeUnit;
@@ -33,7 +37,7 @@ public class EpamProjectWorkApplicationTests {
 
 
 	@Before
-	public void StartUp() {
+	public void startUp() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		logger.info("Драйвер поднят");
@@ -41,7 +45,7 @@ public class EpamProjectWorkApplicationTests {
 	}
 
 	@After
-	public void End() {
+	public void end() {
 		if (driver != null)
 			driver.quit();
 	}
@@ -92,25 +96,25 @@ public class EpamProjectWorkApplicationTests {
 		eventsPage.pastEventsButton.click();
 
 		logger.info("Посмотрим инфу в одной карточке");
-		System.out.println(driver.findElement(By.xpath("(//p[@class = 'language'])[1]//span")).getText());
-		System.out.println(driver.findElement(By.xpath("(//div[@class = 'evnt-event-name'])[1]//span")).getText());
-		System.out.println(driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[1]")).getText());
-		System.out.println(driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[2]")).getText());
-		System.out.println(driver.findElement(By.xpath("(//div[@class = 'speakers-wrapper'])[1]//img")).getTagName());
+		System.out.println(eventsPage.languageOnCard.getText());
+		System.out.println(eventsPage.eventNameOnCard.getText());
+		System.out.println(eventsPage.dateOnCard.getText());
+		System.out.println(eventsPage.registrationInformationOnCard.getText());
+		System.out.println(eventsPage.speakersOnCard.getTagName());
 
 		logger.info("Проверяем что информация о мероприятии не пуста");
-		assertNotNull("Язык мероприятия пуст", driver.findElement(By.xpath("(//p[@class = 'language'])[1]//span")).getText());
-		assertNotNull("В названии мероприятия пусто", driver.findElement(By.xpath("(//div[@class = 'evnt-event-name'])[1]//span")).getText());
-		assertNotNull("Дата мероприятия пуста", driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[1]")).getText());
-		assertNotNull("Нет информации о регистрации", driver.findElement(By.xpath("(//div[@class = 'evnt-dates-cell dates'])[1]//span[2]")).getText());
-		assertNotNull("Нет списка спикеров", driver.findElement(By.xpath("(//div[@class = 'speakers-wrapper'])[1]//img")).getTagName());
+		assertNotNull("Язык мероприятия пуст", eventsPage.languageOnCard.getText());
+		assertNotNull("В названии мероприятия пусто", eventsPage.eventNameOnCard.getText());
+		assertNotNull("Дата мероприятия пуста", eventsPage.dateOnCard.getText());
+		assertNotNull("Нет информации о регистрации", eventsPage.registrationInformationOnCard.getText());
+		assertNotNull("Нет списка спикеров", eventsPage.speakersOnCard.getTagName());
 		logger.info("Поля: Язык, Название, Дата мероприятия, Информация о регистрации, Спикеры не пусты");
 	}
 
 
 	@Test
 	@Step("Сheck the dates of upcoming events")
-	public void СheckTheDatesOfUpcomingEvents() throws InterruptedException {
+	public void checkTheDatesOfUpcomingEvents() throws InterruptedException {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
 
@@ -125,7 +129,7 @@ public class EpamProjectWorkApplicationTests {
 		assertTrue("Нажатая кнопка не соответствует Upcoming events ", actualButtonText.contains("UPCOMING EVENTS"));
 		logger.info("Активная кнопка: Upcoming events");
 		logger.info("Проверим, что на странице есть карточки");
-		driver.findElements(By.xpath("//div[@class = 'evnt-events-column cell-3']"));
+		eventsPage.anyСardOnThePage.getLocation();
 		logger.info("На странице есть карточки событий");
 //Сюда нужна проверка, что Даты проведения мероприятий больше или равны текущей дате (или текущая дата находится в диапазоне дат проведения)
 		logger.info("Проверим, что даты проведения мероприятий больше или равны текущей дате");
@@ -133,9 +137,10 @@ public class EpamProjectWorkApplicationTests {
 
 	@Test
 	@Step("Viewing past events in Canada")
-	public void СheckPastEventsInCanada() throws InterruptedException {
+	public void checkPastEventsInCanada() throws InterruptedException {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+		Filters filters = PageFactory.initElements(driver,Filters.class);
 
 		logger.info("Тест стaрт");
 		homePage.openHomePage();
@@ -144,9 +149,9 @@ public class EpamProjectWorkApplicationTests {
 		logger.info("Нажимаем на кнопку Past Events");
 		eventsPage.pastEventsButton.click();
 		logger.info("Нажимаем на Location в блоке фильтров");
-		driver.findElement(By.xpath("//span[normalize-space()='Location']")).click();
+		filters.locationInFilter.click();
 		logger.info("И выбираем Canada в выпадающем списке");
-		driver.findElement(By.xpath("//label[normalize-space()='Canada']")).click();
+		filters.сanadaInFilterOfLocation.click();
 		Thread.sleep(1000);
 
 		logger.info("Проверим, что количество карточек равно счетчику на кнопке Past Events");
@@ -171,18 +176,22 @@ public class EpamProjectWorkApplicationTests {
 
 	@Test
 	@Step("Сheck the Filtering of reports by category")
-	public void СheckTheFilteringOfReportsByCategory() throws InterruptedException {
+	public void checkTheFilteringOfReportsByCategory() throws InterruptedException {
 		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+		VideoPage videoPage = PageFactory.initElements(driver, VideoPage.class);
+		Filters filters = PageFactory.initElements(driver,Filters.class);
+		MessageAboutCookies messageAboutCookies = PageFactory.initElements(driver, MessageAboutCookies.class);
+		VideoPageCard videoPageCard = PageFactory.initElements(driver, VideoPageCard.class);
 
 		logger.info("Тест стaрт");
 		homePage.openHomePage();
 		logger.info("Переходим на вкладку Talks Library (Video)");
-		driver.findElement(By.xpath("//a[@class='nav-link'][normalize-space()='Video']")).click();
+		homePage.clickOnTheTabVideo();
 		logger.info("Нажимаем на More Filters");
-		driver.findElement(By.xpath("//span[normalize-space()='More Filters']")).click();
+		filters.moreFiltersButton.click();
 		logger.info("Выбираем на вкладке фильтров: Category – Testing");
-		driver.findElement(By.xpath("//div[@id='filter_category']")).click();
+		filters.categoryInFilter.click();
 
 		//Крутим скролл вниз
 		JScrollPane jScrollPane1 = new findElement(By.xpath("//div[@class='evnt-filter-menu evnt-dropdown-menu dropdown-menu with-arrow show']//div[@class='evnt-filter-menu-scroll']"));
@@ -190,43 +199,73 @@ public class EpamProjectWorkApplicationTests {
 		vsb.setValue( vsb.getMaximum() );
 		//Выбираем Testing
 		JavascriptExecutor ex=(JavascriptExecutor)driver;
-		ex.executeScript("arguments[0].click()", driver.findElement(By.xpath("//label[normalize-space()='Testing']")));
+		ex.executeScript("arguments[0].click()", filters.testingInCategoryInFilter);
 
 //		Thread.sleep(1000);
 		logger.info("Выбираем на вкладке фильтров: Location – Belarus");
-		driver.findElement(By.xpath("//div[@id='filter_location']")).click();
-		driver.findElement(By.xpath("//label[normalize-space()='Belarus']")).click();
+		filters.locationInFilter.click();
+		filters.belarusInFilterOfLocation.click();
+//		Thread.sleep(1000);
 		logger.info("Выбираем на вкладке фильтров: Language – English");
-		driver.findElement(By.xpath("//div[@id='filter_language']")).click();
-		driver.findElement(By.xpath("//label[normalize-space()='ENGLISH']")).click();
+		filters.languageInFilter.click();
+		filters.englishInLanguageInFilter.click();
+//		Thread.sleep(1000);
 		System.out.println("Ура");
 		logger.info("Проверим, что на странице отображаются карточки соответствующие правилам выбранных фильтров");
 		logger.info("Перейдем в одну из них");
 
-//		logger.info("Нажимаем на Hide Filters, чтобы фильтр уменьшился, зараза!");
-//		driver.findElement(By.xpath("//span[normalize-space()='Hide Filters']")).click();
-
 		logger.info("Жмем принять на сообщении про куки, чтобы они пропали, будь они не ладны!");
-		driver.findElement(By.xpath("//button[@id = 'onetrust-accept-btn-handler']")).click();
+		messageAboutCookies.acceptButton.click();
 
+//		Thread.sleep(1000);
 		logger.info("А вот теперь, наконец-то, перейдем в одну из них");
-		driver.findElement(By.xpath("//div[@class = 'evnt-talks-column cell-6']")).click();
+		videoPage.cardOnTheVideoPage.click();
 
-		String address = driver.findElement(By.xpath("//div[@class = 'evnt-talk-details location evnt-now-past-talk']//span")).getText();
+		String address = videoPageCard.adressOnCard.getText();
 		System.out.println(address);
-		String language = driver.findElement(By.xpath("//div[@class='evnt-talk-details language evnt-now-past-talk']//span")).getText();
+		String language = videoPageCard.languageOnCard.getText();
 		System.out.println(language);
-		String category = driver.findElement(By.xpath("//label[normalize-space()='Testing']")).getText();
+		String category = videoPageCard.categoryOnCardTesting.getText();
 		System.out.println(category);
 
 		assertTrue(address.contains("Belarus"));
 		assertTrue(language.contains("ENGLISH"));
 		assertTrue(category.contains("Testing"));
 		System.out.println("Ура, на странице отображаются карточки соответствующие правилам выбранных фильтров");
+	}
 
+	@Test
+	@Step("Search for reports by keyword")
+	public void SearchForReportsByKeyword() throws InterruptedException {
+		HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+		EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+		MessageAboutCookies messageAboutCookies = PageFactory.initElements(driver, MessageAboutCookies.class);
+		Filters filters = PageFactory.initElements(driver,Filters.class);
+		VideoPage videoPage = PageFactory.initElements(driver, VideoPage.class);
+		VideoPageCard videoPageCard = PageFactory.initElements(driver, VideoPageCard.class);
 
+		logger.info("Тест стaрт");
+		homePage.openHomePage();
+		logger.info("Переходим на вкладку Talks Library (Video)");
+		homePage.clickOnTheTabVideo();
+
+		logger.info("Кликаем на поиск по ключевому слову в фильтре и вводим ключевое слово QA в поле поиска");
+		filters.searchByKeyword.sendKeys("QA");
+		logger.info("Проверяем, что на странице отображаются доклады, содержащие в названии ключевое слово поиска");
+
+		logger.info("Жмем принять на сообщении про куки, чтобы они пропали, будь они не ладны!");
+		messageAboutCookies.acceptButton.click();
+
+		logger.info("Перейдем в одну из них");
+		videoPage.cardOnTheVideoPage.click();
+
+		String category = videoPageCard.categoryOnCardQA.getText();
+		System.out.println(category);
+		assertTrue(category.contains("QA"));
+		System.out.println("Ура, на странице отображаются доклады, содержащие в названии ключевое слово поиска");
 
 	}
+
 
 	private class findElement extends JScrollPane {
 		public findElement(By xpath) {

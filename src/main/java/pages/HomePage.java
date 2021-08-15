@@ -29,5 +29,12 @@ public class HomePage {
 
     }
 
+    public void clickOnTheTabVideo(){
+        driver.findElement(By.xpath("//a[@class='nav-link'][normalize-space()='Video']")).click();
+        logger.info("Открыта вкладка Video");
+
+
+    }
+
 
 }
