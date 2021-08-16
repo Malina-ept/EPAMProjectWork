@@ -1,10 +1,16 @@
 package com.example.EPAMProjectWork;
 
+
+import com.codeborne.selenide.logevents.SelenideLogger;
+import com.example.EPAMProjectWork.helpers.Browsers;
+import com.example.EPAMProjectWork.helpers.WDFactory;
 import io.qameta.allure.*;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -32,13 +38,18 @@ public class EpamProjectWorkApplicationTests {
     private Logger logger = LogManager.getLogger(EpamProjectWorkApplicationTests.class);
     protected static WebDriver driver;
 
+    @BeforeClass
+    @Step("Set up environment")
+    public static void setUp() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+    }
 
     @Before
     public void startUp() {
         driver = initDriver();
 
 // Для использования WDFactory:
-//        driver = WDFactory.createDriver(Browsers.CHROME);
+        driver = WDFactory.createDriver(Browsers.CHROME);
 
         logger.info("Драйвер поднят");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -51,7 +62,6 @@ public class EpamProjectWorkApplicationTests {
     }
 
     @Test
-    @Step("View Upcoming Events")
     @Epic("EPAM")
     @Feature("Upcoming Events")
     @Story("View upcoming events from events.epam.com")
