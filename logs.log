@@ -1745,3 +1745,35 @@
 2021-08-16 16:59:14,901 INFO c.e.E.EpamProjectWorkApplicationTests [main] РўРµСЃС‚ СЃС‚aСЂС‚
 2021-08-16 16:59:17,572 INFO p.HomePage [main] РћС‚РєСЂС‹С‚Р° РґРѕРјР°С€РЅСЏСЏ СЃС‚СЂР°РЅРёС†Р° https://events.epam.com/
 2021-08-16 16:59:17,713 INFO p.HomePage [main] РћС‚РєСЂС‹С‚Рѕ РѕРєРЅРѕ Р±СЂР°СѓР·РµСЂР° РЅР° РїРѕР»РЅС‹Р№ СЌРєСЂР°РЅ
+2021-08-16 17:09:47,194 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-5] Драйвер поднят
+2021-08-16 17:09:47,391 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-5] Тест стaрт
+2021-08-16 17:09:51,714 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-3] Драйвер поднят
+2021-08-16 17:09:51,746 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-3] Тест стaрт
+2021-08-16 17:09:51,809 INFO p.HomePage [pool-1-thread-5] Открыта домашняя страница https://events.epam.com/
+2021-08-16 17:09:52,044 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-2] Драйвер поднят
+2021-08-16 17:09:52,058 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-2] Тест стaрт
+2021-08-16 17:09:52,951 INFO p.HomePage [pool-1-thread-5] Открыто окно браузера на полный экран
+2021-08-16 17:09:55,734 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-4] Драйвер поднят
+2021-08-16 17:09:55,870 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-4] Тест стaрт
+2021-08-16 17:09:56,621 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-1] Драйвер поднят
+2021-08-16 17:09:56,719 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-1] Тест стaрт
+2021-08-16 17:09:58,301 INFO p.HomePage [pool-1-thread-3] Открыта домашняя страница https://events.epam.com/
+2021-08-16 17:09:58,765 INFO p.HomePage [pool-1-thread-2] Открыта домашняя страница https://events.epam.com/
+2021-08-16 17:09:59,384 INFO p.HomePage [pool-1-thread-3] Открыто окно браузера на полный экран
+2021-08-16 17:09:59,385 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-3] Переходим на вкладку Talks Library (Video)
+2021-08-16 17:09:59,774 INFO p.HomePage [pool-1-thread-2] Открыто окно браузера на полный экран
+2021-08-16 17:09:59,907 INFO p.HomePage [pool-1-thread-1] Открыта домашняя страница https://events.epam.com/
+2021-08-16 17:10:00,394 INFO p.HomePage [pool-1-thread-1] Открыто окно браузера на полный экран
+2021-08-16 17:10:01,614 INFO p.HomePage [pool-1-thread-4] Открыта домашняя страница https://events.epam.com/
+2021-08-16 17:10:01,832 INFO p.HomePage [pool-1-thread-4] Открыто окно браузера на полный экран
+2021-08-16 17:10:01,832 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-4] Переходим на вкладку Talks Library (Video)
+2021-08-16 17:10:54,470 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-6] Драйвер поднят
+2021-08-16 17:10:54,478 INFO c.e.E.EpamProjectWorkApplicationTests [pool-1-thread-6] Тест стaрт
+2021-08-16 17:10:57,292 INFO p.HomePage [pool-1-thread-6] Открыта домашняя страница https://events.epam.com/
+2021-08-16 17:10:57,456 INFO p.HomePage [pool-1-thread-6] Открыто окно браузера на полный экран
+2021-08-16 17:14:30,108 INFO c.e.E.EpamProjectWorkApplicationTests [main] Р”СЂР°Р№РІРµСЂ РїРѕРґРЅСЏС‚
+2021-08-16 17:14:30,203 INFO c.e.E.EpamProjectWorkApplicationTests [main] РўРµСЃС‚ СЃС‚aСЂС‚
+2021-08-16 17:14:32,785 INFO p.HomePage [main] РћС‚РєСЂС‹С‚Р° РґРѕРјР°С€РЅСЏСЏ СЃС‚СЂР°РЅРёС†Р° https://events.epam.com/
+2021-08-16 17:14:32,923 INFO p.HomePage [main] РћС‚РєСЂС‹С‚Рѕ РѕРєРЅРѕ Р±СЂР°СѓР·РµСЂР° РЅР° РїРѕР»РЅС‹Р№ СЌРєСЂР°РЅ
+2021-08-16 17:14:47,968 INFO c.e.E.EpamProjectWorkApplicationTests [main] Р”СЂР°Р№РІРµСЂ РїРѕРґРЅСЏС‚
+2021-08-16 17:14:47,981 INFO c.e.E.EpamProjectWorkApplicationTests [main] РўРµСЃС‚ СЃС‚aСЂС‚
