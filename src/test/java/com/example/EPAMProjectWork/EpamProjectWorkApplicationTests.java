@@ -46,8 +46,8 @@ public class EpamProjectWorkApplicationTests {
 
     @Before
     public void startUp() {
-// Для использования удаленного запуска на Selenoid
-        driver = initDriver();
+// Для использования Selenide
+//        driver = initDriver();
 
 // Для использования WDFactory:
         driver = WDFactory.createDriver(Browsers.CHROME);
