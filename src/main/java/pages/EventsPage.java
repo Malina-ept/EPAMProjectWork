@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EventsPage {
 
     private final WebDriver driver;
@@ -15,6 +18,10 @@ public class EventsPage {
         this.driver = driver;
     }
 
+//    public void takeTheDate(String dateOnCard) {
+//
+//    }
+
     @FindBy(xpath = "//a[@class = 'evnt-tab-link nav-link active']//span[text()='Upcoming events']")
     public WebElement upcomingEventsActiveButton;
 
@@ -23,6 +30,9 @@ public class EventsPage {
 
     @FindBy(xpath = "//a[@class = 'evnt-tab-link nav-link']")
     public WebElement pastEventsButton;
+
+    @FindBy(xpath = "//a[@class = 'evnt-tab-link nav-link active']//span[text()='Past Events']")
+    public WebElement pastEventsButtonActive;
 
     // Любая карточка на странице
     @FindBy(xpath = "//div[@class = 'evnt-events-column cell-3']")
@@ -35,7 +45,7 @@ public class EventsPage {
     @FindBy(xpath = "(//div[@class = 'evnt-event-name'])[1]//span")
     public WebElement eventNameOnCard;
 
-    @FindBy(xpath = "(//div[@class = 'evnt-dates-cell dates'])[1]//span[1]")
+    @FindBy(xpath = "(//div[@class = 'evnt-dates-cell dates'])[1]//span[@class = 'date']")
     public WebElement dateOnCard;
 
     @FindBy(xpath = "(//div[@class = 'evnt-dates-cell dates'])[1]//span[2]")

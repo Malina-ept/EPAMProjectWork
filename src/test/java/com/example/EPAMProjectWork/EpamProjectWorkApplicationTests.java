@@ -3,6 +3,7 @@ package com.example.EPAMProjectWork;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.example.EPAMProjectWork.helpers.Browsers;
+import com.example.EPAMProjectWork.helpers.Data;
 import com.example.EPAMProjectWork.helpers.WDFactory;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -27,6 +28,8 @@ import pages.elements.Filters;
 import pages.elements.MessageAboutCookies;
 
 import javax.swing.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.concurrent.TimeUnit;
 
 import static com.example.EPAMProjectWork.helpers.WebDriverInit.initDriver;
@@ -61,6 +64,7 @@ public class EpamProjectWorkApplicationTests {
         if (driver != null)
             driver.quit();
     }
+
 
     @Test
     @Epic("EPAM")
@@ -112,6 +116,7 @@ public class EpamProjectWorkApplicationTests {
 
         logger.info("Нажимаем на кнопку Past Events");
         eventsPage.pastEventsButton.click();
+        Thread.sleep(1000);
 
         logger.info("Посмотрим инфу в одной карточке");
         System.out.println(eventsPage.languageOnCard.getText());
@@ -153,10 +158,6 @@ public class EpamProjectWorkApplicationTests {
         logger.info("Проверим, что на странице есть карточки");
         eventsPage.anyСardOnThePage.getLocation();
         logger.info("На странице есть карточки событий");
-
-
-//Сюда нужна проверка, что Даты проведения мероприятий больше или равны текущей дате (или текущая дата находится в диапазоне дат проведения)
-        logger.info("Проверим, что даты проведения мероприятий больше или равны текущей дате");
     }
 
     @Test
@@ -189,6 +190,7 @@ public class EpamProjectWorkApplicationTests {
         logger.info("Посчитаем количество карточек на странице");
         int count = driver.findElements(By.xpath("//div[@class = 'evnt-events-column cell-3']")).size();
 
+
         String countOfCardsOnPageText = String.valueOf(count);
 
         System.out.println(countOfCardsOnPageText);
@@ -196,8 +198,6 @@ public class EpamProjectWorkApplicationTests {
 
         logger.info("И сравним их количество");
         assertEquals("Кол-во на кнопке не совпадает с кол-вом карточек на странице", countOfCardsOnButton, countOfCardsOnPageText);
-
-// Здесь проверяем, что на странице отображаются карточки прошедших мероприятий. Даты проведенных мероприятий меньше текущей даты.
 
         System.out.println("Ура");
     }
@@ -294,6 +294,215 @@ public class EpamProjectWorkApplicationTests {
         assertTrue(category.contains("QA"));
         System.out.println("Ура, на странице отображаются доклады, содержащие в названии ключевое слово поиска");
 
+    }
+
+    @Test
+    @Epic("EPAM")
+    @Feature("Upcoming Events")
+    @Story("View upcoming events from events.epam.com")
+    @Description("Let's check that the dates of the events are greater than the current date")
+    public void checkDateUpcomingEvents() throws InterruptedException {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+//        Data data = PageFactory.initElements(driver, Data.class);
+        Calendar cal = Calendar.getInstance();
+        Long currentDate = cal.getTime().getTime();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
+        logger.info("Тест стaрт");
+        homePage.openHomePage();
+        homePage.clickOnTheTabEvents();
+
+//        Есть некая проблема видимости элемента из класса Data, поэтому весь код из Data был перенесен сюда.
+        logger.info("Возьмем даты из карточки события");
+        String dateForCheckUpcoming = eventsPage.dateOnCard.getText();
+
+        logger.info("Удалим в них пробелы");
+        String[] parts = dateForCheckUpcoming.split(" ");
+        System.out.println(dateForCheckUpcoming);
+
+        String year = parts[5];
+        String dayStart = parts[0];
+        String dayEnd = parts[3];
+        String monthStart = parts[1];
+        String monthEnd = parts[4];
+
+        System.out.println(year);
+        System.out.println(dayStart);
+        System.out.println(dayEnd);
+        System.out.println(monthStart);
+        System.out.println(monthEnd);
+
+
+        Calendar start = new GregorianCalendar(Integer.parseInt(year),
+                castMonthToIntUpcoming(monthStart), Integer.parseInt(dayStart));
+        Long startDate = start.getTime().getTime();
+
+        Calendar end = new GregorianCalendar(Integer.parseInt(year),
+                castMonthToIntUpcoming(monthEnd), Integer.parseInt(dayEnd));
+        Long endDate = end.getTime().getTime();
+
+
+        System.out.println(startDate);
+        System.out.println(endDate);
+
+        System.out.println(currentDate);
+
+        logger.info("Проверим, что даты проведения мероприятий больше или равны текущей дате");
+        System.out.println(currentDate >= endDate);
+        assertTrue("Даты проведения мероприятий меньше текущей даты", currentDate <= endDate);
+    }
+
+    @org.jetbrains.annotations.Contract(pure = true)
+    public static Integer castMonthToIntUpcoming(String month) {
+        Integer currentMonth = 0;
+        switch (month) {
+            case ("Jan"):
+                currentMonth = 0;
+                break;
+            case ("Feb"):
+                currentMonth = 1;
+                break;
+            case ("Mar"):
+                currentMonth = 2;
+                break;
+            case ("Apr"):
+                currentMonth = 3;
+                break;
+            case ("May"):
+                currentMonth = 4;
+                break;
+            case ("Jun"):
+                currentMonth = 5;
+                break;
+            case ("Jul"):
+                currentMonth = 6;
+                break;
+            case ("Aug"):
+                currentMonth = 7;
+                break;
+            case ("Sep"):
+                currentMonth = 8;
+                break;
+            case ("Oct"):
+                currentMonth = 9;
+                break;
+            case ("Nov"):
+                currentMonth = 10;
+                break;
+            case ("Dec"):
+                currentMonth = 11;
+                break;
+        }
+        return currentMonth;
+    }
+
+    @Test
+    @Epic("EPAM")
+    @Feature("Past Events")
+    @Story("View past events from events.epam.com")
+    @Description("Let's check that the dates of the events held are less than the current date")
+    public void checkDatePastEvents() throws InterruptedException {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
+        Calendar cal = Calendar.getInstance();
+        Long currentDate = cal.getTime().getTime();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+        logger.info("Тест стaрт");
+        homePage.openHomePage();
+        homePage.clickOnTheTabEvents();
+
+
+        logger.info("Нажимаем на кнопку Past Events");
+        eventsPage.pastEventsButton.click();
+
+        logger.info("Ждем загрузки карточек на странице Past Events");
+        Thread.sleep(1000);
+
+        logger.info("Возьмем даты из карточки события");
+        String dateForCheckPast = eventsPage.dateOnCard.getText();
+
+        logger.info("Удалим в них пробелы");
+        String[] parts = dateForCheckPast.split(" ");
+        System.out.println(dateForCheckPast);
+
+        String year = parts[5];
+        String dayStart = parts[0];
+        String dayEnd = parts[3];
+        String monthStart = parts[1];
+        String monthEnd = parts[4];
+
+        System.out.println(year);
+        System.out.println(dayStart);
+        System.out.println(dayEnd);
+        System.out.println(monthStart);
+        System.out.println(monthEnd);
+
+
+        Calendar start = new GregorianCalendar(Integer.parseInt(year),
+                castMonthToIntPast(monthStart), Integer.parseInt(dayStart));
+        Long startDate = start.getTime().getTime();
+
+        Calendar end = new GregorianCalendar(Integer.parseInt(year),
+                castMonthToIntPast(monthEnd), Integer.parseInt(dayEnd));
+        Long endDate = end.getTime().getTime();
+
+
+        System.out.println(startDate);
+        System.out.println(endDate);
+
+        System.out.println(currentDate);
+
+        logger.info("Проверим, что даты проведенных мероприятий меньше текущей даты");
+        System.out.println(currentDate >= endDate);
+        assertTrue("Даты проведенных мероприятий больше текущей даты", currentDate >= endDate);
+    }
+
+    @org.jetbrains.annotations.Contract(pure = true)
+    public static Integer castMonthToIntPast(String month) {
+        Integer currentMonth = 0;
+        switch (month) {
+            case ("Jan"):
+                currentMonth = 0;
+                break;
+            case ("Feb"):
+                currentMonth = 1;
+                break;
+            case ("Mar"):
+                currentMonth = 2;
+                break;
+            case ("Apr"):
+                currentMonth = 3;
+                break;
+            case ("May"):
+                currentMonth = 4;
+                break;
+            case ("Jun"):
+                currentMonth = 5;
+                break;
+            case ("Jul"):
+                currentMonth = 6;
+                break;
+            case ("Aug"):
+                currentMonth = 7;
+                break;
+            case ("Sep"):
+                currentMonth = 8;
+                break;
+            case ("Oct"):
+                currentMonth = 9;
+                break;
+            case ("Nov"):
+                currentMonth = 10;
+                break;
+            case ("Dec"):
+                currentMonth = 11;
+                break;
+        }
+        return currentMonth;
     }
 
     private class findElement extends JScrollPane {
