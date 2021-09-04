@@ -3,7 +3,6 @@ package com.example.EPAMProjectWork;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.example.EPAMProjectWork.helpers.Browsers;
-import com.example.EPAMProjectWork.helpers.Data;
 import com.example.EPAMProjectWork.helpers.WDFactory;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -39,7 +38,7 @@ public class EpamProjectWorkApplicationTests {
 
 
     private Logger logger = LogManager.getLogger(EpamProjectWorkApplicationTests.class);
-    protected static WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeClass
     @Step("Set up environment")
@@ -267,7 +266,7 @@ public class EpamProjectWorkApplicationTests {
     @Feature("Talks Library (Video)")
     @Story("Search for reports by keyword from events.epam.com")
     @Description("Check the filtering by keywords")
-    public void SearchForReportsByKeyword() throws InterruptedException {
+    public void searchForReportsByKeyword() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         MessageAboutCookies messageAboutCookies = PageFactory.initElements(driver, MessageAboutCookies.class);
         Filters filters = PageFactory.initElements(driver, Filters.class);
@@ -304,7 +303,6 @@ public class EpamProjectWorkApplicationTests {
     public void checkDateUpcomingEvents() throws InterruptedException {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         EventsPage eventsPage = PageFactory.initElements(driver, EventsPage.class);
-//        Data data = PageFactory.initElements(driver, Data.class);
         Calendar cal = Calendar.getInstance();
         Long currentDate = cal.getTime().getTime();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -314,7 +312,6 @@ public class EpamProjectWorkApplicationTests {
         homePage.openHomePage();
         homePage.clickOnTheTabEvents();
 
-//        Есть некая проблема видимости элемента из класса Data, поэтому весь код из Data был перенесен сюда.
         logger.info("Возьмем даты из карточки события");
         String dateForCheckUpcoming = eventsPage.dateOnCard.getText();
 
